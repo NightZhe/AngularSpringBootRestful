@@ -11,14 +11,23 @@ import { ApiService } from '../service/api.service';
 export class HelloComponent implements OnInit {
   [x: string]: any;
   hello!: String;
+  ownerName = "";
+  password = "";
+  result = "";
 
   constructor(private apiService: ApiService) { }
   ngOnInit(): void {
   }
+
+  connet() {
+    this.result = this.ownerName + this.password;
+  }
+
   /** 委託ApiService.getHello()取得內容 */
   getHello() {
     this['apiService'].getHello().subscribe(
       (value: HelloData) => this.success(value)
+
     );
   }
   /** API呼叫成功的處理 */

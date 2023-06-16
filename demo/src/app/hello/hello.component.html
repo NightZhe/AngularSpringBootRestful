@@ -8,6 +8,20 @@
 </div>
 
 <div>
+    <form action="http://localhost:8091/getsomething">
+        <label>帳號</label>
+        <input type="text" name="name"><br>
+        <label>密碼</label>
+        <input type="text" name="password"> <br>
+        <input type="submit"><br>
+    </form>
+</div>
+
+<br>
+<br>
+
+<div>
+
     <button (click)="getHello()">Get Hello</button> <!-- 取得{{hello}}顯示的內容-->
     <button (click)="clear()">Clear</button> <!-- 清除{{hello}}顯示的內容 -->
 </div>
