@@ -39,6 +39,5 @@ public class APIReturnObject {
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
-    
 
 }

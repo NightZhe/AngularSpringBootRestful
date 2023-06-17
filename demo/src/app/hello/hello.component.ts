@@ -27,12 +27,13 @@ export class HelloComponent implements OnInit {
   getHello() {
     this['apiService'].getHello().subscribe(
       (value: HelloData) => this.success(value)
-
     );
+
   }
   /** API呼叫成功的處理 */
   success(value: HelloData) {
     this.hello = value.message;
+    console.log(value.message);
   }
 
   /** 清除頁面{{hello}}內容 */

@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       (response) => {
         this.posts = response;
         console.log(response);
-        this.router.navigate(['index']); //跳轉到index
+        this.router.navigate(['index', response]); //跳轉到index
       },
       (error) => { console.log(error); }
     );

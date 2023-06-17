@@ -1,3 +1,13 @@
-<p>index works!</p>
+<head>
+</head>
 
-<a [routerLink]="['/exchange/getStockDayAll']">上市個股日成交資訊</a>
+<body>
+    <p>index works!</p>
+    <a [routerLink]="['/exchange/getStockDayAll']">上市個股日成交資訊</a><br>
+
+    <button (click)="getInfo()">Get Info</button> <!-- 取得{{InfoLogin}}顯示的內容-->
+
+    {{resultAccount}}
+    {{resultPassword}}
+    {{resultMessane}}
+</body>

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.restful.demo.dto.HelloDto;
@@ -23,7 +24,7 @@ public class DemoController {
         return new HelloDto(anyString + ownerName);
     }
 
-    @PostMapping("/login")
+    @RequestMapping("/login")
     public APIReturnObject login(@RequestBody User user) {
         System.out.println(user.getAccount());
         System.out.println(user.getPassword());
@@ -34,6 +35,7 @@ public class DemoController {
         result.setData(data);
         result.setUserName(user.getAccount());
         result.setUserPassword(user.getPassword());
+        System.out.println(result.getMessage());
         return result;
     }
 }

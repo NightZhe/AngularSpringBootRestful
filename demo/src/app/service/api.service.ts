@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HelloData } from '../data/hello-data';
 import { Observable } from 'rxjs';
+import { LoginData } from '../data/login-data';
 
 
 @Injectable({
@@ -30,12 +31,16 @@ export class ApiService {
   }
   getHello() {
     var ownerName = "steve";
-    var hellomeaasge = this.http.get<HelloData>('http://localhost:8091/hello?ownerName=' + ownerName)
+    var hellomeaasge = this.http.get<HelloData>('http://localhost:8091/hello')
+    // var hellomeaasge = this.http.get<HelloData>('http://localhost:8091/hello?ownerName=' + ownerName)
     return hellomeaasge;// 呼叫Spring Boot的DemoController.getHello()
   }
+  getLoginInfo() {
+    var LoginInfo = this.http.post<LoginData>('http://localhost:8091/login', { LoginData });
 
-  // getBearer(token: String, webUrl: String): Observable<APIRe> {
-  // }
+    return LoginInfo
+
+  }
 
 
 

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class HelloData {}","map":{"version":3,"names":["HelloData"],"sources":["/Users/ben/Documents/TestAngular/AngularSpringBootRestful/demo/src/app/data/hello-data.ts"],"sourcesContent":["export class HelloData {\n\n    message!: string;\n\n}"],"mappings":"AAAA,OAAM,MAAOA,SAAS"},"metadata":{},"sourceType":"module","externalDependencies":[]}
